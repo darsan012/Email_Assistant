@@ -55,8 +55,6 @@ FLASK_ENV=development
 ```bash
 python app.py
 ```
-Here’s the updated **Contributing Rules** section with information about managing dependencies using `pip freeze`:
-
 ---
 
 ## Contributing Rules
