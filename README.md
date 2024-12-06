@@ -55,6 +55,86 @@ FLASK_ENV=development
 ```bash
 python app.py
 ```
+Here’s the updated **Contributing Rules** section with information about managing dependencies using `pip freeze`:
+
+---
+
+## Contributing Rules
+
+We welcome contributions to the **Email Assistant with AI** project!
+Please follow these rules to maintain consistency and ensure a smooth workflow:
+
+---
+
+### 1. Always Pull Before Starting
+- Pull the latest changes from the `main` branch before starting any new work:
+  ```bash
+  git pull origin main
+  ```
+
+---
+
+### 2. Create a New Branch for Each Feature
+- Use the following naming convention for branches:  
+  ```
+  <your-initials><FeatureName><MonthAbbreviation><Day>
+  ```
+  Example:
+  - For "Rakshya Niraula" adding email filtering on December 6th:
+    ```
+    rnAddEmailFilterDec06
+    ```
+
+---
+
+### 3. Resolve Conflicts Locally
+- Handle any merge conflicts on your local machine rather than on GitHub's web interface.
+
+---
+
+### 4. Never Commit Directly to `main`
+- The `main` branch is protected. Always work on a separate branch and submit a pull request (PR) for review.
+
+---
+
+### 5. Managing Dependencies with `pip freeze`
+- If you install a new package, make sure to update the `requirements.txt` file to reflect the changes:
+  ```bash
+  pip freeze > requirements.txt
+  ```
+- This ensures that all contributors can install the same dependencies by running:
+  ```bash
+  pip install -r requirements.txt
+  ```
+- Always check in the updated `requirements.txt` as part of your commit.
+
+---
+
+
+### 6. Naming Conventions
+- **File Names**: Use **PascalCasing** (e.g., `EmailHandler.py`).  
+- **Template & Static Files**: Use **snake_case** (e.g., `user_profile.html`, `email_styles.css`).  
+- **Variables and Functions**: Use **snake_case** (e.g., `process_email()`).
+
+---
+
+### 7. Testing and Debugging
+- Before submitting a pull request:
+  - Test your code locally using `pytest` or Flask's test client.
+  - Debug any issues to ensure your changes work as expected.
+  - Avoid pushing broken or half-completed code.
+
+---
+
+### 8. Submit a Pull Request
+- Submit a PR to the `main` branch with a clear title and description of your changes.
+- Tag a team member for review.
+
+---
+
+By following these rules, we can ensure that our project stays clean, efficient, and collaborative. Thank you for contributing! 😊
+
+---
 
 
 
