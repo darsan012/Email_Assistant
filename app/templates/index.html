@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
-    <link rel="stylesheet" href="\Email_Assistant\app\static\css\styles.css">
+    <title>Email Assistant</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 
 <body>
-    <script src="\Email_Assistant\app\static\js\scripts.js"></script>
-    <h1>Meow</h1>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+          <img src="../../logo.png" alt="Logo" />
+        </div>
+        <div class="signin">
+          <button class="btn-signin">Sign in</button>
+        </div>
+    </header>
+
+    <!-- Email Replier Section -->
+    <section class="email-replier">
+        <div class="email-generator">
+            <h2>Create an E-mail Reply</h2>
+            <form id="email-form">
+                <label for="to">To:</label>
+                <input type="email" id="to" placeholder="Recipient's email" required />
+
+                <label for="message">Type what you want to convey:</label>
+                <textarea id="message" placeholder="Enter your text here..." required></textarea>
+
+                <label for="tone">Tone:</label>
+                <div class="tone-options">
+                    <button type="button" class="tone-btn active">Formal</button>
+                    <button type="button" class="tone-btn">Informal</button>
+                </div>
+
+                <button type="submit" class="btn-generate">Generate</button>
+            </form>
+        </div>
+
+        <div class="email-preview">
+            <h2>E-mail Replied</h2>
+            <div class="preview-content">
+                <p><strong>Subject:</strong> Example Mail</p>
+                <p>Dear Tom,</p>
+                <p>Thank you for reaching out to us. We appreciate your interest in our services and look forward to assisting you.</p>
+                <p>Best regards,</p>
+                <p>CreatAI Team</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="team">A Team Project by Nabin, Rakshya, Sujan, Saurabh, and Desmond</p>
+        <p class="copyright">© 2024 Email Assistant. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="../static/js/scripts.js"></script>
 </body>
 </html>
