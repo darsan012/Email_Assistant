@@ -63,40 +63,40 @@ body {
 }
 
 
-/* Email Generator Section */
+/* Email Replier Section */
 
-.email-generation {
+.email-replier {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 2rem;
+    gap: 2rem;
     box-sizing: border-box;
 }
 
-.form-container {
+.email-generator {
+    flex: 1;
     background-color: #1b263b;
     padding: 2rem;
     border-radius: 10px;
-    width: 400px;
-    max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-container h2 {
+.email-generator h2 {
     margin-bottom: 1rem;
     color: #f1c40f;
     text-align: center;
 }
 
-.form-container label {
+.email-generator form label {
     display: block;
     margin-top: 1rem;
     font-size: 0.9rem;
 }
 
-input,
-textarea {
+.email-generator input,
+.email-generator textarea {
     width: 100%;
     padding: 0.8rem;
     margin-top: 0.5rem;
@@ -104,21 +104,35 @@ textarea {
     border-radius: 5px;
     outline: none;
     font-size: 0.9rem;
-    background-color: #f4f4f4;
+    background-color: #5d679c;
 }
 
-textarea {
+#to::placeholder {
+    color: #c21c1c;
+    font-style: italic;
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+#message::placeholder {
+    color: #c21c1c;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.email-generator textarea {
     resize: none;
     height: 100px;
 }
 
-.tone-options {
+.email-generator .tone-options {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.tone-btn {
+.email-generator .tone-btn {
     flex: 1;
     padding: 0.5rem;
     border-radius: 20px;
@@ -129,11 +143,11 @@ textarea {
     font-size: 0.9rem;
 }
 
-.tone-btn.active {
+.email-generator .tone-btn.active {
     background-color: #f1c40f;
 }
 
-.btn-generate {
+.email-generator .btn-generate {
     width: 100%;
     padding: 0.8rem;
     margin-top: 1rem;
@@ -146,13 +160,39 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-.btn-generate:hover {
+.email-generator .btn-generate:hover {
     background-color: #ff6a3d;
 }
 
-.sent {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+
+/* Right Half: Email Preview */
+
+.email-preview {
+    flex: 1;
+    background-color: #1b263b;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.email-preview h2 {
+    margin-bottom: 1rem;
+    color: #f1c40f;
     text-align: center;
+}
+
+.email-preview .preview-content {
+    background-color: #0d1b2a;
+    padding: 1rem;
+    border-radius: 5px;
     color: #ccc;
+    font-size: 0.9rem;
+}
+
+.email-preview .preview-content p {
+    margin: 0.5rem 0;
+}
+
+.email-preview .preview-content strong {
+    color: #f1c40f;
 }
