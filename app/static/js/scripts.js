@@ -10,15 +10,20 @@ toneButtons.forEach(button => {
 
 // Handle form submission
 const emailForm = document.getElementById('email-form');
+const previewContent = document.querySelector('.preview-content');
 
 emailForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent page reload
+    event.preventDefault();
 
-    // Get form values
     const to = document.getElementById('to').value;
     const message = document.getElementById('message').value;
     const tone = document.querySelector('.tone-btn.active').textContent;
 
-    // Simulate email generation
-    alert(`Email generated for ${to} with tone: ${tone}`);
+    previewContent.innerHTML = `
+        <p><strong>Subject:</strong> Generated Reply</p>
+        <p>Dear ${to || 'Recipient'},</p>
+        <p>${message}</p>
+        <p>Best regards,</p>
+        <p>CreatAI Team</p>
+    `;
 });
