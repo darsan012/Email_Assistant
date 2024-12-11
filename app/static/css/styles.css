@@ -1,58 +1,77 @@
-/* Navbar Styles */
+/* General Styles */
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #1b263b;
-}
-
-header .logo img {
-    height: 40px;
-}
-
-header .nav {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-header .nav a {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1b2a;
     color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
 
-header .nav a:hover {
-    color: #f1c40f;
+
+/* Header Section */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    background-color: #1b263b;
+    height: 15vh;
+    position: relative;
+    box-sizing: border-box;
 }
 
-header .btn-signin {
+.header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.header .signin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+}
+
+.header .btn-signin {
     background-color: #3a86ff;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-header .btn-signin:hover {
+.header .btn-signin:hover {
     background-color: #1d4ed8;
 }
 
 
-/* Email Generation Section */
+/* Email Generator Section */
 
 .email-generation {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    background-color: #0d1b2a;
-    color: #fff;
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
 .form-container {
@@ -60,6 +79,7 @@ header .btn-signin:hover {
     padding: 2rem;
     border-radius: 10px;
     width: 400px;
+    max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -130,7 +150,7 @@ textarea {
     background-color: #ff6a3d;
 }
 
-.credits {
+.sent {
     margin-top: 1rem;
     font-size: 0.9rem;
     text-align: center;
