@@ -1,2 +1,4 @@
 venv/
 .idea/
+.env
+__init__.py
