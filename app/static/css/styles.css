@@ -1,0 +1,44 @@
+/* Navbar Styles */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #1b263b;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header .nav a:hover {
+    color: #f1c40f;
+}
+
+header .btn-signin {
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .btn-signin:hover {
+    background-color: #1d4ed8;
+}
